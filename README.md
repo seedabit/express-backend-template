@@ -43,6 +43,11 @@ Com isso configurado, rode as migrações do Prisma:
 
 - `npx prisma migrate dev`
 
+Em seguida, gere o cliente Prisma baseado no seu schema:
+
+- `npx prisma generate`
+
+O comando npx prisma generate é essencial pois ele analisa o seu schema do Prisma e gera o cliente Prisma tipado (Prisma Client). Este cliente é uma biblioteca TypeScript/JavaScript que fornece uma API fortemente tipada para interagir com seu banco de dados. Ele cria tipos específicos para suas entidades e relacionamentos definidos no schema, oferecendo autocompleção e verificação de tipos durante o desenvolvimento. Sem executar este comando após alterações no schema, seu código não terá acesso às definições de tipos atualizadas e poderá resultar em erros de compilação ou comportamentos inesperados.
 Após isso, você poderá rodar a aplicação utilizando o comando:
 
 - `npm run dev`
